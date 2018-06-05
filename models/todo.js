@@ -3,7 +3,9 @@ var mongoose = require("mongoose");
 var todoSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: "Name must not be empty!"
+        required: "Name must not be empty!",
+        minlength: 1,
+        trim: true
     },
     completed: {
         type: Boolean,
